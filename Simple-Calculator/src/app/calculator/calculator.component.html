@@ -1,0 +1,14 @@
+<div class="calculator">
+    <input type="text" class="form-control mb-2" [(ngModel)]="expression" name="expression" [readonly]="true" />
+  
+    <div class="row">
+      <div class="col-3" *ngFor="let key of keys">
+        <button type="button" class="btn btn-primary btn-block" (click)="appendToExpression(key.value)">
+          {{ key.label }}
+        </button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success btn-block mt-2 mr-3" (click)="calculate()" >=</button>
+    <button type="button" class="btn btn-danger btn-block mt-2" (click)="clear()">C</button>
+  </div>
+  
